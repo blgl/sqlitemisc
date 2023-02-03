@@ -1,3 +1,20 @@
+/*
+ * SQLite extension functions:
+ *
+ * instr(haystack, needle)
+ *    like the built-in function of the same name,
+ *    except it doesn't think strings end at NUL
+ *
+ * instr(haystack, needle, startpos)
+ *    same, except start searching from the specified minimum position
+ *
+ * rinstr(haystack, needle)
+ *    like instr, but finds the last occurrence of the needle
+ *
+ * rinstr(haystack, needle, startpos)
+ *    search backwards from the specified maximum position
+ */
+
 #include <string.h>
 #include <sqlite3ext.h>
 
